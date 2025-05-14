@@ -1,0 +1,15 @@
+.btn path {
+    transition: 0.3s;
+}
+
+.btn {
+    transition: 0.3s;
+}
+
+.btn:active {
+    transform: scale(0.8);
+}
+
+.active path {
+    fill: #ff3d00;
+}

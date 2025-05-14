@@ -1,0 +1,26 @@
+.wrap {
+    width: 100%;
+    height: 2.25rem;
+    background: rgba(0, 0, 0, 0.14);
+    box-shadow: inset 0 -0.0625rem 0.125rem 0 rgba(255, 255, 255, 0.14);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.62rem;
+    padding: 0 0.75rem;
+}
+
+.wrap input {
+    height: 100%;
+    width: 100%;
+    font-size: 0.88rem;
+}
+
+.wrap input::placeholder {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.wrap svg,
+.wrap svg path {
+    fill: rgba(255, 255, 255, 0.54);
+}

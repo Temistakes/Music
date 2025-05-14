@@ -1,0 +1,1 @@
+export const getTitle = (state) => state.album.name;

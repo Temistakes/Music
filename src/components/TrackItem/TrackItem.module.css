@@ -1,0 +1,140 @@
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.track:active {
+    transform: scale(0.98);
+}
+
+.track::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.track:hover::before,
+.track.current::before {
+    opacity: 1;
+}
+
+.left,
+.right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.right {
+    gap: 2rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    margin-bottom: 0.25rem;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.artist,
+.time {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.likeBtn {
+    transform-origin: 50% 50%;
+    transition: 0.3s;
+}
+
+.likeBtn path {
+    fill: rgba(255, 255, 255, 0.64);
+}
+
+.likeBtn:hover {
+    transform: scale(1.2);
+}
+
+.imgWrap {
+    min-width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.imgWrap::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.imgWrap::after {
+    content: "";
+    width: 1.875rem;
+    height: 1.875rem;
+    background: url("../../assets/img/icons/play.svg") no-repeat center / 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.track.play .imgWrap::after {
+    background: url("../../assets/img/icons/pause.svg") no-repeat center / 100%;
+    animation: pulse 2s linear infinite;
+}
+
+.track:hover .imgWrap::before,
+.track:hover .imgWrap::after,
+.track.current .imgWrap::before,
+.track.current .imgWrap::after {
+    opacity: 1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.85);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.85);
+    }
+}

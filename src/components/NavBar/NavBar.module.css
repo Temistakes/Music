@@ -1,0 +1,68 @@
+.navbar {
+    height: 100%;
+    backdrop-filter: blur(6.25rem);
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    overflow: auto;
+    font-size: 0.88rem;
+}
+
+.header {
+    margin-bottom: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.list a {
+    transition: 0.3s;
+}
+
+.list a:active {
+    transform: scale(0.95);
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+.imgBtn,
+.quadroBtn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.imgBtn img {
+    width: 1.875rem;
+    border-radius: 0.38rem;
+}
+
+.quadroBtn .iconWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 0.38rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.firstBtn {
+    gap: 1.5rem;
+}

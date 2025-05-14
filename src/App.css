@@ -1,38 +1,258 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Reset and base styles  */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Links */
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a:hover {
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+    display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul,
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active,
+textarea:active,
+textarea:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+svg,
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+span,
+label,
+a,
+button {
+    display: inline-block;
+}
+
+a,
+button {
+    color: inherit;
+    background: none;
+}
+
+/* Base */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    line-height: normal;
+    font-size: 1rem;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    width: 0;
+}
+
+.app {
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Container */
+
+.container {
+    min-height: 100vh;
+    max-width: calc(65.0625rem + 2.5rem);
+    width: 100%;
+    padding: 0 1.25rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main {
+    width: 100%;
+    height: 40.625rem;
+    display: grid;
+    grid-template-columns: 14.81rem 1fr;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+.content-wrap {
+    width: 100%;
+    position: relative;
+}
+
+/* NoUI Slider */
+
+.noUi-target {
+    background: rgba(0, 0, 0, 0.14) !important;
+    border-radius: 1rem;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.noUi-target:not(.vertSlider) {
+    height: 0.25rem !important;
+}
+
+.vertSlider {
+    width: 0.5rem !important;
+    border-radius: 3rem !important;
+}
+
+.noUi-handle {
+    top: calc(50% + 0.0625rem) !important;
+    right: 0 !important;
+    transform: translate(50%, -50%);
+    border-radius: 50% !important;
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+    cursor: pointer !important;
+}
+
+.vertSlider .noUi-handle {
+    width: 1rem !important;
+    height: 1rem !important;
+    top: 0 !important;
+    right: auto !important;
+    left: calc(50% - 0.25rem) !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+    display: none !important;
+}
+
+.noUi-connect {
+    background: rgba(255, 255, 255, 0.44) !important;
+    border-radius: 3rem !important;
+}
+
+.noUi-connects {
+    cursor: pointer;
+}
+
+.volume {
+    height: 5rem !important;
+    position: absolute !important;
+    bottom: calc(100% + 0.75rem) !important;
+    left: 50% !important;
+    transform: translate(-50%, 0);
+}
+
+.hidden .volume {
+    display: none !important;
 }

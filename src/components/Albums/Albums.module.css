@@ -1,0 +1,15 @@
+.albums {
+    margin-bottom: 1.25rem;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}

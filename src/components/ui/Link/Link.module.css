@@ -1,0 +1,31 @@
+.link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.link svg {
+    transform: scale(1.5);
+}
+
+.link::before {
+    content: "";
+    width: calc(100% + 2rem);
+    height: calc(100% + 1.5rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.link:hover::before {
+    opacity: 1;
+}

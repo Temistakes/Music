@@ -1,0 +1,14 @@
+.items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem 1rem;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.intersectObj {
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
