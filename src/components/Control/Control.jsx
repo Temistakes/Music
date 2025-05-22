@@ -1,4 +1,4 @@
-import React, { useState, memo, useEffect } from "react";
+import React, { useState, memo, useEffect, useCallback, useRef } from "react";
 import IconBtn from "../ui/IconBtn/IconBtn";
 import Track from "../Track/Track";
 import cl from "./Control.module.css";
@@ -39,6 +39,7 @@ import {
     setVolume,
 } from "../../bll/reducers/appReducer";
 import Loader from "../Loader/Loader";
+import { CSSTransition } from "react-transition-group";
 
 const Control = ({
     track,
@@ -66,7 +67,6 @@ const Control = ({
         } else {
             audio.current.play();
         }
-        console.log(isPlaying, track);
     }, [isPlaying, track.id]);
 
     const togglePlayPause = () => {
@@ -123,7 +123,7 @@ const Control = ({
                 />
             </div>
 
-            {!track.id && loading ? (
+            {/* {!track.id && loading ? (
                 <Loader />
             ) : (
                 track.id && (
@@ -135,7 +135,15 @@ const Control = ({
                         loading={loading}
                     />
                 )
-            )}
+            )} */}
+
+            <Track
+                data={{ ...track, time, duration }}
+                setTime={setTime}
+                setPlaying={setPlaying}
+                audio={audio}
+                loading={loading}
+            />
 
             <div className={cl.right}>
                 {

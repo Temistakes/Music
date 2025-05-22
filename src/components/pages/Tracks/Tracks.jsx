@@ -83,7 +83,6 @@ const Tracks = ({
     isPlayingCurrent,
     trackLoading,
 }) => {
-    console.log(total);
     const intersectEl = useRef();
     const [query, setQuery] = useState("");
 

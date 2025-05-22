@@ -15,6 +15,7 @@ import {
     faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import cl from "./NavBar.module.css";
+import { memo } from "react";
 
 const NavBar = () => {
     return (
@@ -96,4 +97,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default memo(NavBar);

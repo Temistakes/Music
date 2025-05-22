@@ -256,3 +256,27 @@ body {
 .hidden .volume {
     display: none !important;
 }
+
+.track-appear {
+    transform: translate(-1rem, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.track-appear-done {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s;
+}
+
+.track-exit {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.3s;
+}
+
+.track-exit-done {
+    transform: translate(-1rem, 0);
+    opacity: 0;
+    transition: 0.3s;
+}

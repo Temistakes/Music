@@ -1,5 +1,6 @@
 import React from "react";
 import cl from "./Select.module.css";
+import { memo } from "react";
 
 const Select = ({ defaultVal, values, setVal }) => {
     return (
@@ -14,4 +15,4 @@ const Select = ({ defaultVal, values, setVal }) => {
     );
 };
 
-export default Select;
+export default memo(Select);

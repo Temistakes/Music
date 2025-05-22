@@ -3,6 +3,7 @@ import cl from "./Header.module.css";
 import RoundBtn from "../ui/RoundBtn/RoundBtn";
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 import userDefault from "../../assets/img/general/user-default.png";
+import { memo } from "react";
 
 const Header = ({
     title,
@@ -43,4 +44,4 @@ const Header = ({
     );
 };
 
-export default Header;
+export default memo(Header);
